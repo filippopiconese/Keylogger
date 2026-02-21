@@ -5,6 +5,7 @@ mss
 numpy
 poolmanager
 psutil
+pyarmor
 pyinstaller
 pynput
 requests
