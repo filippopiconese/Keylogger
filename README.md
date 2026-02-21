@@ -78,3 +78,11 @@ Output: `dist\main.exe` — no `.env` or any other file needed alongside it.
 - Every interval: records keyboard/mouse, takes a screenshot on-click, records microphone audio (if available), then sends an email report and uploads files to Dropbox.
 - Typing the `MAGIC_WORD` stops the process.
 - All actions (including errors) are logged and included in the email report.
+
+---
+
+## TODO
+- [ ] Save logs to local file when email sending fails (data loss prevention)
+- [ ] Move `SEND_REPORT_EVERY`, `MAGIC_WORD`, `SCHEDULED_TASK_NAME` from `main.py` to `.env` (avoid recompiling for config changes)
+- [ ] Replace `print()` + `appendlog()` with Python `logging` module (unified structured logging)
+- [ ] Refactor `KeyLogger` class into separate components: `SystemInfoCollector`, `AudioRecorder`, `Reporter` (maintainability)
